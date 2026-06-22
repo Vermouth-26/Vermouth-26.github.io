@@ -703,8 +703,9 @@ body {
         min-height: 100vh;
     }
     
+    /* El resto de tus estilos heredados */
     .header-title h1 { font-size: 2.2rem; }
-    .countdown-box { gap: 8px; flex-wrap: wrap; }
+    .countdown-box { gap: 8px; flex-wrap: wrap; display: flex; }
     .time-section { min-width: 65px; padding: 10px; }
     .time-section h2 { font-size: 1.5rem; }
     .time-section span { font-size: 0.7rem; }
