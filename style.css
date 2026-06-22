@@ -684,11 +684,24 @@ body {
    RESPONSIVE
 ========================================== */
 @media (max-width: 768px) {
-    /* Fix para el fondo en celulares (evita el zoom excesivo que causa 'fixed' en iOS/algunos Android) */
+    /* 1. Cambiamos la imagen de fondo solo para celulares */
     .index-body, .detail-body {
+        /* REEMPLAZA 'NombreDeTuImagenMobile.png' por el nombre real de tu imagen 1080x1920 */
+        background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), 
+                    url('Imagenes/Vermouth26.jpeg');
+        
+        /* 2. Le decimos que ocupe toda la pantalla */
+        background-size: cover;
+        
+        /* 3. CLAVE: Sacamos el fixed para que iOS/Android no rompan la imagen */
         background-attachment: scroll;
-        background-position: top center; /* Ajusta la imagen hacia arriba */
+        
+        /* 4. Centramos la imagen */
+        background-position: top center;
     }
+    
+    /* ... acá abajo sigue lo que ya tenías dentro del @media ... */
+}
     
     .header-title h1 { font-size: 2.2rem; }
     .countdown-box { gap: 8px; flex-wrap: wrap; }
