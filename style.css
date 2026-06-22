@@ -9,7 +9,7 @@
     --glass-border: rgba(255, 255, 255, 0.15);
     
     /* Variables for individual pages by default */
-    --bg-image: url('Imagenes/Vermouth26.jpeg');
+    --bg-image: url('Imagenes/Vermouth26.png');
 }
 
 * {
@@ -678,48 +678,6 @@ body {
     background: linear-gradient(to right, #00ffcc, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-/* =======================================
-   SOCIAL BUTTONS (Pinterest & TikTok)
-========================================== */
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: white;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 12px 28px;
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.social-btn svg {
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.pinterest-btn:hover {
-    background: #BD081C;
-    border-color: #BD081C;
-    box-shadow: 0 5px 20px rgba(189, 8, 28, 0.5);
-    transform: translateY(-3px);
-}
-
-.tiktok-btn:hover {
-    background: #010101;
-    border-color: #69C9D0;
-    box-shadow: 0 5px 20px rgba(105, 201, 208, 0.35), 0 0 15px rgba(238, 29, 82, 0.3);
-    transform: translateY(-3px);
-}
-
-.social-btn:hover svg {
-    transform: scale(1.15);
 }
 
 /* =======================================
