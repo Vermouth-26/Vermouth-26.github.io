@@ -1,0 +1,11 @@
+# Archivos del sistema
+.gemini/
+.DS_Store
+Thumbs.db
+*.log
+
+# Archivos temporales del editor
+*.swp
+*.swo
+*~
+.vscode/
