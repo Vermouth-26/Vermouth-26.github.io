@@ -684,6 +684,12 @@ body {
    RESPONSIVE
 ========================================== */
 @media (max-width: 768px) {
+    /* Fix para el fondo en celulares (evita el zoom excesivo que causa 'fixed' en iOS/algunos Android) */
+    .index-body, .detail-body {
+        background-attachment: scroll;
+        background-position: top center; /* Ajusta la imagen hacia arriba */
+    }
+    
     .header-title h1 { font-size: 2.2rem; }
     .countdown-box { gap: 8px; flex-wrap: wrap; }
     .time-section { min-width: 65px; padding: 10px; }
