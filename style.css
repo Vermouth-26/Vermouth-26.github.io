@@ -686,7 +686,7 @@ body {
 @media (max-width: 768px) {
     /* 1. Cambiamos la imagen de fondo solo para celulares */
     .index-body, .detail-body {
-        /* REEMPLAZA 'NombreDeTuImagenMobile.png' por el nombre real de tu imagen 1080x1920 */
+        /* REEMPLAZA 'NombreDeTuImagenMobile.png' por el nombre real de tu imagen 1080x1920 que vuelva a deployar*/
         background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), 
                     url('Imagenes/Vermouth26.jpeg');
         
