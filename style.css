@@ -686,25 +686,29 @@ body {
 @media (max-width: 768px) {
     /* 1. Cambiamos la imagen de fondo solo para celulares */
     .index-body, .detail-body {
-        /* REEMPLAZA 'NombreDeTuImagenMobile.png' por el nombre real de tu imagen 1080x1920 que vuelva a deployar*/
+        /* Reemplaza la ruta si es necesario */
         background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), 
                     url('Imagenes/Vermouth26.jpeg');
         
-        /* 2. Le decimos que ocupe toda la pantalla */
+        /* 2. Le decimos que ocupe toda la pantalla disponible */
         background-size: cover;
         
-        /* 3. CLAVE: Sacamos el fixed para que iOS/Android no rompan la imagen */
+        /* 3. Evita que la imagen se duplique si la pantalla es muy larga */
+        background-repeat: no-repeat;
+        
+        /* 4. CLAVE: Sacamos el fixed para que iOS/Android no rompan la imagen */
         background-attachment: scroll;
         
-        /* 4. Centramos la imagen */
-        background-position: top center;
+        /* 5. Centramos la imagen para que el foco quede en el medio */
+        background-position: center center;
+
+        /* 6. Nos aseguramos de que el cuerpo ocupe al menos el alto de la pantalla */
+        min-height: 100vh;
     }
     
-    /* ... acá abajo sigue lo que ya tenías dentro del @media ... */
-}
-    
+    /* [CORREGIDO] Eliminé la llave que cerraba el @media antes de tiempo */
     .header-title h1 { font-size: 2.2rem; }
-    .countdown-box { gap: 8px; flex-wrap: wrap; }
+    .countdown-box { gap: 8px; flex-wrap: wrap; display: flex; } /* Agregado display: flex por si acaso */
     .time-section { min-width: 65px; padding: 10px; }
     .time-section h2 { font-size: 1.5rem; }
     .time-section span { font-size: 0.7rem; }
@@ -713,7 +717,7 @@ body {
     .mystery-container { margin: 20px; padding: 30px 20px; }
     .mystery-icon { font-size: 4rem; }
     .mystery-container h1 { font-size: 2rem; }
-}
+} /* Este es el cierre real del @media (max-width: 768px) */
 
 @media (max-width: 480px) {
     .seller-item {
