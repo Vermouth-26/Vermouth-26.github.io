@@ -684,10 +684,23 @@ body {
    RESPONSIVE
 ========================================== */
 @media (max-width: 768px) {
-    /* Fix para el fondo en celulares (evita el zoom excesivo que causa 'fixed' en iOS/algunos Android) */
+    .fondo-celular-fijo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), url('Imagenes/Vermouth26.jpeg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        will-change: transform;
+    }
+
     .index-body, .detail-body {
-        background-attachment: scroll;
-        background-position: top center; /* Ajusta la imagen hacia arriba */
+        background: transparent !important;
+        min-height: 100vh;
     }
     
     .header-title h1 { font-size: 2.2rem; }
