@@ -684,31 +684,31 @@ body {
    RESPONSIVE
 ========================================== */
 @media (max-width: 768px) {
-    /* 1. Cambiamos la imagen de fondo solo para celulares */
     .index-body, .detail-body {
-        /* Reemplaza la ruta si es necesario */
         background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), 
                     url('Imagenes/Vermouth26.jpeg');
         
-        /* 2. Le decimos que ocupe toda la pantalla disponible */
-        background-size: cover;
+        /* OPCIÓN A: Fuerza a la imagen a estirarse exactamente al ancho y alto del celu */
+        background-size: 100% 100%;
         
-        /* 3. Evita que la imagen se duplique si la pantalla es muy larga */
+        /* Si notas que se deforma un poco y prefieres que NO se deforme, 
+           comenta la línea de arriba y usa esta (OPCIÓN B):
+           background-size: contain; */
+
         background-repeat: no-repeat;
-        
-        /* 4. CLAVE: Sacamos el fixed para que iOS/Android no rompan la imagen */
         background-attachment: scroll;
         
-        /* 5. Centramos la imagen para que el foco quede en el medio */
-        background-position: center center;
+        /* La posicionamos arriba para que si sobra espacio abajo, el diseño no se rompa */
+        background-position: top center;
 
-        /* 6. Nos aseguramos de que el cuerpo ocupe al menos el alto de la pantalla */
-        min-height: 100vh;
+        /* Forzamos a que el fondo use el alto de la ventana del celular */
+        height: 100vh;
+        width: 100vw;
     }
     
-    /* [CORREGIDO] Eliminé la llave que cerraba el @media antes de tiempo */
+    /* El resto de tus estilos heredados */
     .header-title h1 { font-size: 2.2rem; }
-    .countdown-box { gap: 8px; flex-wrap: wrap; display: flex; } /* Agregado display: flex por si acaso */
+    .countdown-box { gap: 8px; flex-wrap: wrap; display: flex; }
     .time-section { min-width: 65px; padding: 10px; }
     .time-section h2 { font-size: 1.5rem; }
     .time-section span { font-size: 0.7rem; }
@@ -717,7 +717,7 @@ body {
     .mystery-container { margin: 20px; padding: 30px 20px; }
     .mystery-icon { font-size: 4rem; }
     .mystery-container h1 { font-size: 2rem; }
-} /* Este es el cierre real del @media (max-width: 768px) */
+}
 
 @media (max-width: 480px) {
     .seller-item {
